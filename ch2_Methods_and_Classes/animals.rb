@@ -1,5 +1,19 @@
 class Bird 
-    attr_accessor :name, :age 
+    attr_reader :name, :age 
+
+    def name=(new_name)
+        if new_name == ""
+            raise "Name can't be blank!"
+        end 
+        @name = new_name  
+    end 
+
+    def age=(new_age)
+        if new_age < 0 
+            raise "An age of #{new_age} isn't valid!"
+        end
+        @age = new_age 
+    end 
 
     def report_age 
         puts "#{@name} is #{@age} years old."
@@ -15,7 +29,21 @@ class Bird
 end 
 
 class Dog 
-    attr_accessor :name, :age
+    attr_reader :name, :age
+
+    def name=(new_name)
+        if new_name == ""
+            raise "Name can't be blank!"
+        end  
+        @name = new_name  
+    end 
+
+    def age=(new_age)
+        if new_age < 0 
+            raise "An age of #{new_age} isn't valid"
+        end  
+        @age = new_age  
+    end 
 
     def report_age 
         puts "#{@name} is #{@age} years old."
@@ -31,7 +59,21 @@ class Dog
 end 
 
 class Cat 
-    attr_accessor :name, :age 
+    attr_reader :name, :age 
+
+    def name=(new_name)
+        if new_name == ""
+            raise "Name can't be blank!"
+        end  
+        @name = new_name  
+    end 
+
+    def age=(new_age)
+        if new_age < 0 
+            raise "An age of #{new_age} isn't valid."
+        end  
+        @age = new_age  
+    end 
 
     def report_age 
         puts "#{@name} is #{@age} years old."
@@ -52,7 +94,7 @@ fido.age = 2
 
 kitty = Cat.new 
 kitty.name = "Kitty"
-kitty.age = 4 
+kitty.age = -23
 
 fido.report_age 
 kitty.report_age 
