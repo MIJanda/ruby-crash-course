@@ -1,4 +1,24 @@
 class Bird 
+    def name=(new_name)
+        @name = new_name 
+    end 
+
+    def name 
+        @name 
+    end 
+
+    def age=(new_age)
+        @age = new_age 
+    end 
+
+    def age 
+        @age 
+    end 
+
+    def report_age 
+        puts "#{@name} is #{@age} years old."
+    end 
+
     def talk
         puts "Chirp! Chirp!"
     end 
@@ -9,6 +29,26 @@ class Bird
 end 
 
 class Dog 
+    def name=(new_name)
+        @name = new_name
+    end 
+
+    def name 
+        @name 
+    end 
+
+    def age=(new_age)
+        @age = new_age 
+    end 
+
+    def age 
+        @age 
+    end 
+
+    def report_age 
+        puts "#{@name} is #{@age} years old."
+    end 
+
     def talk
         puts "Bark!"
     end 
@@ -19,6 +59,26 @@ class Dog
 end 
 
 class Cat 
+    def name=(new_name)
+        @name = new_name 
+    end 
+
+    def name 
+        @name 
+    end 
+
+    def age=(new_age)
+        @age = new_age 
+    end 
+
+    def age 
+        @age 
+    end 
+
+    def report_age 
+        puts "#{@name} is #{@age} years old."
+    end 
+
     def talk 
         put "Meow!"
     end 
@@ -28,10 +88,13 @@ class Cat
     end 
 end 
 
-bird = Bird.new 
-cat = Cat.new 
-dog = Dog.new 
+fido = Dog.new 
+fido.name = "Fido"
+fido.age = 2 
 
-dog.talk
-bird.move('tree')
-cat.move('house')
+kitty = Cat.new 
+kitty.name = "Kitty"
+kitty.age = 4 
+
+fido.report_age 
+kitty.report_age 
