@@ -1,19 +1,5 @@
 class Bird 
-    def name=(new_name)
-        @name = new_name 
-    end 
-
-    def name 
-        @name 
-    end 
-
-    def age=(new_age)
-        @age = new_age 
-    end 
-
-    def age 
-        @age 
-    end 
+    attr_accessor :name, :age 
 
     def report_age 
         puts "#{@name} is #{@age} years old."
@@ -29,21 +15,7 @@ class Bird
 end 
 
 class Dog 
-    def name=(new_name)
-        @name = new_name
-    end 
-
-    def name 
-        @name 
-    end 
-
-    def age=(new_age)
-        @age = new_age 
-    end 
-
-    def age 
-        @age 
-    end 
+    attr_accessor :name, :age
 
     def report_age 
         puts "#{@name} is #{@age} years old."
@@ -59,21 +31,7 @@ class Dog
 end 
 
 class Cat 
-    def name=(new_name)
-        @name = new_name 
-    end 
-
-    def name 
-        @name 
-    end 
-
-    def age=(new_age)
-        @age = new_age 
-    end 
-
-    def age 
-        @age 
-    end 
+    attr_accessor :name, :age 
 
     def report_age 
         puts "#{@name} is #{@age} years old."
